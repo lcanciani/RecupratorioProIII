@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Alta";
+}
+@model PanaderiaMVC.Models.VMAlta
+<h2>Alta</h2>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <label>Cliente</label>
+                @Html.TextBoxFor(x => x.Al.Cliente, htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Seleccione Desayuno</label>
+                @Html.DropDownListFor(x => x.Al.Desayuno, new SelectList(Model.Listadesa, "Id", "Nombre"), "SELECCIONE", htmlAttributes: new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label>Seleecione Delivery</label>
+                @Html.DropDownListFor(x => x.Al.Delivery, new SelectList(Model.ListaDely, "Id", "Nombre"), "SELECCIONE", htmlAttributes: new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label>Cliente</label>
+                @Html.TextBoxFor(x => x.Al.Porciones, htmlAttributes: new { @class = "form-control" })
+            </div>
+
+            <input type="submit" value="Aceptar" class="btn btn-primary" />
+        }
+    </div>
+    <div class="col-md-2"></div>
+</div>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<h2>Reporte Delivery</h2>
+
+ @model PanaderiaMVC.Models.VMReporte
+
+<table class="table table-striped">
+
+    <tr>
+
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        
+
+    </tr>
+    @foreach (var v in Model.ListaRepDelivery)
+    {
+        <tr>
+            <td>@v.Id</td>
+            <td>@v.Nombre</td>
+            <td>@v.Cantidad</td>                     
+        </tr>
+    }
+</table>

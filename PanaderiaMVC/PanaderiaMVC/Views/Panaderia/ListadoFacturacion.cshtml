@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "ListadoFacturacion";
+}
+
+@model List<PanaderiaMVC.Models.ListadoFacturacion>
+
+<h2>ListadoFacturacion</h2>
+
+<table class="table table-striped">
+
+    <tr>
+
+        <th>Cliente</th>
+        <th>Desayuno</th>
+        <th>Delivery</th>
+        <th>PrecioTotal</th>
+        
+
+    </tr>
+    @foreach (var v in Model)
+    {
+        <tr>
+            <td>@v.Cliente</td>
+            <td>@v.TipoDesayuno</td>
+            <td>@v.TipoDelivery</td>
+            <td>@v.PrecioTotal</td>
+           
+        </tr>
+    }
+</table>
